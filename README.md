@@ -1,4 +1,4 @@
-# Regression-model-comparision
+# Regression models comparision by student performance on math subject
 
 Pattern Recognition course project using Python
 
