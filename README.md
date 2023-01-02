@@ -124,11 +124,14 @@ Output descriptive statistics of datasets.
 
 将所有的类别特征使用 One hot encoding 重新编码
 
+重新编码后的特征数有59个(包括"G3")
+
 再次查看所有特征与目标值"G3"的相关系数
 
 挑出相关系数前十的特征
 
 并重新制作dataframe
+
 
 
 
@@ -144,9 +147,21 @@ ElasticNet()
 ExtraTreesRegressor()  
 GradientBoostingRegressor()**
 
-第一个function维持模型默认的数值
-第二个function调整参数值
-调整完的参数值如下
+
+建立一个回圈并建立预测
+
+再回圈中制作MAE,RMSE的标准跟dataframe
+
+和制作储存模型的结果的dataframe
+
+制作Baseline的标准
+
+最后回传结果
+
+
+第一个function维持所有回归模型默认的数值  
+第二个function调整参数值  
+调整完的参数值如下  
 
 ### Linear Regression
 
@@ -204,7 +219,29 @@ n_estimators = 300,
 learning_rate = 0.05,  
 max_depth = 6
 
-## Plot Creating
 
+## Create Plots 
 
+制作结果的 bar plot 所有的图表都包括MSE,RMSE
 
+制作模型调整参数后的 bar plot
+
+制作原始模型参数的barplot
+
+制作调整过参数的模型与原始模型参数的比对图表
+
+训练使用全部特征值的回归模型
+
+制作使用全部特征的 barplot
+
+训练删掉G2后的回归模型
+
+制作删掉G2后的 barplot
+
+训练删掉G2G1后的回归模型
+
+制作删掉G2G1后的barplot
+
+制作使用全部特征的回归模型与挑选过特征的回归模型的比对图表
+
+制作删掉G2的模型、删掉G2G1的模型，与没有删除的模型的比对图表
