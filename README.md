@@ -132,6 +132,79 @@ Output descriptive statistics of datasets.
 
 
 
+## Regression Model
+
+制作两个function 并将所有的模型都建进去，包括
+
+**LinearRegression()  
+RandomForestRegressor()    
+SVR()   
+KNeighborsRegressor()  
+ElasticNet()  
+ExtraTreesRegressor()  
+GradientBoostingRegressor()**
+
+第一个function维持模型默认的数值
+第二个function调整参数值
+调整完的参数值如下
+
+### Linear Regression
+
+因想维持原本的模型，所以线性回归并没有进行参数调整
+
+### Random Forest Regressor
+
+设定参数数值  
+n_estimators = 500,  
+max_depth = 5,  
+min_samples_leaf = 2,  
+max_features = "auto",  
+criterion = 'squared_error',  
+random_state = 1  
+
+### Support Vector Machine
+
+
+设定参数数值  
+kernel = 'rbf',   
+degree = 3,  
+C = 100,  
+gamma = 0.001 
+
+### KNeighbors Regressor
+
+设定参数数值  
+n_neighbors = 13,  
+algorithm = "auto",  
+leaf_size = 15,  
+metric = "euclidean"
+
+### Elastic Net
+
+设定参数数值  
+alpha = 1.2,  
+l1_ratio = 1,  
+max_iter = 100  
+
+### ExtraTrees Regressor
+
+设定参数数值  
+n_estimators = 450,  
+max_depth = 7,  
+min_samples_leaf = 1,  
+min_samples_split = 2,  
+max_features = "auto",  
+criterion = 'squared_error',  
+random_state=1
+                                  
+### Gradient Boosting Regressor
+
+设定参数数值  
+n_estimators = 300,  
+learning_rate = 0.05,  
+max_depth = 6
+
+## Plot Creating
 
 
 
