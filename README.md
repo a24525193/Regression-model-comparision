@@ -72,7 +72,7 @@ Attribute Information:
 
 30. absences - number of school absences (numeric: from 0 to 93)
 
-these grades are related with the course subject, Math or Portuguese:
+These grades are related with the course subject, Math:
 
 31. G1 - first period grade (numeric: from 0 to 20)
 
