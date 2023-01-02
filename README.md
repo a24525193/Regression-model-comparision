@@ -117,27 +117,25 @@ Output descriptive statistics of datasets.
 ## Preprocessing
 
 
+Viewing the correlation coefficient of a feature
 
-查看特征的相关系数
+View the correlation coefficient between the characteristic and the target value "G3"
 
-查看特征与目标值"G3"的相关系数
+Recode all category features with One hot encoding
 
-将所有的类别特征使用 One hot encoding 重新编码
+The number of recoded features is 59 (including "G3")
 
-重新编码后的特征数有59个(包括"G3")
+Review the correlation coefficient between all characteristics and the target value "G3" again
 
-再次查看所有特征与目标值"G3"的相关系数
+Pick out the top ten characteristics of correlation coefficient
 
-挑出相关系数前十的特征
-
-并重新制作dataframe
-
+And remake the dataframe
 
 
 
 ## Regression Model
 
-制作两个function 并将所有的模型都建进去，包括
+Make two functions and build all the models into them, including
 
 **LinearRegression()  
 RandomForestRegressor()    
@@ -147,29 +145,28 @@ ElasticNet()
 ExtraTreesRegressor()  
 GradientBoostingRegressor()**
 
+Build a loop and build a forecast
 
-建立一个回圈并建立预测
+Make MAE, RMSE standard and dataframe in the circle
 
-再回圈中制作MAE,RMSE的标准跟dataframe
+and make a dataframe storing the results of the model
 
-和制作储存模型的结果的dataframe
+Standards for making Baseline
 
-制作Baseline的标准
-
-最后回传结果
+Finally return the result
 
 
-第一个function维持所有回归模型默认的数值  
-第二个function调整参数值  
-调整完的参数值如下  
+The first function maintains the default values for all regression models
+The second function adjusts the parameter value
+The adjusted parameter values are as follows
 
 ### Linear Regression
 
-因想维持原本的模型，所以线性回归并没有进行参数调整
+Because I wanted to maintain the original model, the linear regression did not adjust the parameters.
 
 ### Random Forest Regressor
 
-设定参数数值  
+Set parameter value:  
 n_estimators = 500,  
 max_depth = 5,  
 min_samples_leaf = 2,  
@@ -180,7 +177,7 @@ random_state = 1
 ### Support Vector Machine
 
 
-设定参数数值  
+Set parameter value:  
 kernel = 'rbf',   
 degree = 3,  
 C = 100,  
@@ -188,7 +185,7 @@ gamma = 0.001
 
 ### KNeighbors Regressor
 
-设定参数数值  
+Set parameter value:  
 n_neighbors = 13,  
 algorithm = "auto",  
 leaf_size = 15,  
@@ -196,14 +193,14 @@ metric = "euclidean"
 
 ### Elastic Net
 
-设定参数数值  
+Set parameter value:  
 alpha = 1.2,  
 l1_ratio = 1,  
 max_iter = 100  
 
 ### ExtraTrees Regressor
 
-设定参数数值  
+Set parameter value:    
 n_estimators = 450,  
 max_depth = 7,  
 min_samples_leaf = 1,  
@@ -214,7 +211,7 @@ random_state=1
                                   
 ### Gradient Boosting Regressor
 
-设定参数数值  
+Set parameter value:    
 n_estimators = 300,  
 learning_rate = 0.05,  
 max_depth = 6
@@ -222,26 +219,27 @@ max_depth = 6
 
 ## Create Plots 
 
-制作结果的 bar plot 所有的图表都包括MSE,RMSE
+Make a bar plot of the results All charts include MSE, RMSE.
 
-制作模型调整参数后的 bar plot
+Make a bar plot after adjusting the parameters of the model.
 
-制作原始模型参数的barplot
+Make a bar plot of the original model parameters.
 
-制作调整过参数的模型与原始模型参数的比对图表
+Make a comparison chart of the parameters of the adjusted model and the original model parameters.
 
-训练使用全部特征值的回归模型
+Train a regression model using all eigenvalues.
 
-制作使用全部特征的 barplot
+Make a bar plot that uses all features.
 
-训练删掉G2后的回归模型
+Train the regression model after deleting G2.
 
-制作删掉G2后的 barplot
+Make a barplot after deleting G2.
 
-训练删掉G2G1后的回归模型
+Train the regression model after deleting G2, G1.
 
-制作删掉G2G1后的barplot
+Make a bar plot after deleting G2, G1.
 
-制作使用全部特征的回归模型与挑选过特征的回归模型的比对图表
+Make a comparison chart of the regression model using all features and the regression model with selected features.
 
-制作删掉G2的模型、删掉G2G1的模型，与没有删除的模型的比对图表
+Make a comparison chart of the model with G2 deleted, the model with G2G1 deleted, and the model without deletion.
+
